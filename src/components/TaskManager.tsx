@@ -8,14 +8,6 @@ type Task = {
   title: string;
 };
 // TODO: create custom hook to manage task state
-const useTaskManager = () => {
-  const [title, setTitle] = useState<string>("");
-  const [searchKeyword, setSearchKeyword] = useState<string>("");
-  const [tasks, setTasks] = useState<Task[]>([]);
-
-  const completeTask = (id: string) => {
-    setTasks(tasks.filter((task) => task.id !== id));
-  };
 
   const updateTask = (id: string, taskUpdate: Partial<Task>) => {
     const newTasks = tasks.map((task) =>
